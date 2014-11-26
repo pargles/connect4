@@ -24,12 +24,10 @@ class Arcade extends CI_Controller {
 		    		$data['errmsg']=	$_SESSION['errmsg'];
 		    		unset($_SESSION['errmsg']);
 		    	}
-		    	echo "index()";
 		    	$this->load->view('arcade/mainPage',$data);
     }
 
     function getAvailableUsers() {
-    	echo "get available users()";
  	   	$this->load->model('user_model');
  	   	
     		$users = $this->user_model->getAvailableUsers();
